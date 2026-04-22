@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Student</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label>Name:</label>
+    <input type="text" name="name" class="form-control" required>
+    <label>Roll No:</label>
+    <input type="text" name="roll_no" class="form-control" required>
+  </div>
+
+  <h4>Subjects</h4>
+  <div id="subjects">
+    <div class="subject mb-3">
+      <input type="text" name="subject_name" placeholder="Subject Name" required>
+      <input type="number" name="grade" placeholder="Grade" required>
+      <input type="number" name="credits" placeholder="Credits" required>
+    </div>
+  </div>
+  <button type="button" onclick="addSubject()" class="btn btn-secondary">Add Another Subject</button>
+  <br><br>
+  <button type="submit" class="btn btn-primary">Add Student</button>
+</form>
+
+<script>
+function addSubject() {
+  const container = document.getElementById('subjects');
+  const subject = document.createElement('div');
+  subject.className = 'subject mb-3';
+  subject.innerHTML = `
+    <input type="text" name="subject_name" placeholder="Subject Name" required>
+    <input type="number" name="grade" placeholder="Grade" required>
+    <input type="number" name="credits" placeholder="Credits" required>
+  `;
+  container.appendChild(subject);
+}
+</script>
+{% endblock %}

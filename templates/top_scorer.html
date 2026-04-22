@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Top Scorer</h2>
+{% if top %}
+<p><strong>{{ top.name }}</strong> (Roll No: {{ top.roll_no }}) - SGPA: {{ top.sgpa }}</p>
+{% else %}
+<p>No students found.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{
+  "name": "Alice",
+  "roll_no": "001",
+  "subjects": [
+    {"name": "Math", "grade": 9, "credits": 4},
+    {"name": "Physics", "grade": 10, "credits": 3},
+    {"name": "Chemistry", "grade": 8, "credits": 3}
+  ]
+}
